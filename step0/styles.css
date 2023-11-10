@@ -1,0 +1,39 @@
+/* Règle CSS générale pour tous les éléments h1 et h2 */
+h1,
+h2 {
+  background-color: yellow;
+}
+
+/* Classe pour les bordures */
+.border {
+  border: 2px solid blue;
+}
+
+/* Classe pour le surlignage */
+.highlight {
+  background-color: rgb(41, 128, 0);
+  color: white;
+}
+
+/* Règle CSS spécifique pour l'élément avec l'ID 'titre-principal' */
+#titre-principal {
+  background-color: pink;
+  border: 5px dashed red;
+}
+
+/* Règle pour les paragraphes <p> */
+p {
+  background-color: black;
+  color: white;
+}
+
+/* Une autre règle pour les p, démontrant l'importance de l'ordre */
+p {
+  background-color: white;
+  color: black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row; /* Default value */
+}

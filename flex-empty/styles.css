@@ -1,0 +1,53 @@
+/** Code for design purposes */
+.cell {
+    margin: 1em;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.element1 {
+    background-color: #e71d62;
+}
+
+.element2 {
+    background-color: #f44234;
+}
+
+.element3 {
+    background-color: #3e50b3;
+}
+
+.element4 {
+    background-color: #99a6ec;
+}
+
+
+/* Code to modify */ 
+.row {
+    width: 100%;
+    /* Step 1) 
+    display: flex;
+    */
+}
+
+.cell {
+    /* Step 1) 
+    flex: 1;
+    */
+    /* position horizontally */
+    /* Step 2) 
+    display: flex;
+    justify-content: center;
+    */
+
+    /* position vertically */
+    /* Step 3) 
+    align-items: center;
+    */
+}
+
+.large {
+    /* Step 4)
+    flex: 3;
+    */
+}

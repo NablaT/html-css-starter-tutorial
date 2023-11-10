@@ -1,0 +1,192 @@
+body,
+html {
+  /* 0) define padding margin and fonts fot the document */
+  margin: 0;
+  padding: 0;
+  font-family: "DM Serif Display", serif;
+  /* 2) Define the height and width to 100% to there and below to have full screen elements */
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  /* 1) position elements to the page left and right */
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  background-image: url("./assets/temple.png");
+  height: 100%;
+  width: 100%;
+  /* 3) Define colors */
+  color: white;
+
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  /* 4) We position the h1 and the button correctly with this code + .content class + .heading and .hey classes*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  width: 60%;
+  /* 5) We can play with a margin bottom to explain what is a margin and how it works. Here we want the title to be right positionned to avoid to have white text on white image, so we us margin to position it correctly with the image colors */
+  margin-bottom: 25em;
+}
+
+/* here we explain that we override the font size in the right order with heading and hey classes */
+.heading {
+  font-size: 3em;
+}
+
+.hey {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/** Right section now (to start after the left section is done, so after the number 5) */
+
+/* 6) we position the objects : a column in all the element, we have the gallery which is a row and same for the categories and destinations. + margin */
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+}
+
+.gallery,
+.destinations,
+.categories {
+  display: flex;
+}
+
+.gallery,
+.destinations {
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.categories {
+  margin: 1em 0 0.5em 0;
+}
+
+.category {
+  font-weight: bold;
+  margin-right: 3em;
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 0.5em 1em;
+}
+
+.category:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+/* TODO: explains sizes in pixel, rem em and % */
+.title {
+  font-size: 2.5em;
+}
+
+/* 7) we position the images with the right size. We also use object-fit : TODO add an exaplanation about how object-fit works*/
+.small-image {
+  height: 80px;
+}
+
+/* 8) search bar */
+.search-bar {
+  display: flex;
+  background-color: #eeeeee;
+  width: 50%;
+  padding: 1rem;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+.search-field {
+  border: none;
+  background-color: transparent;
+  color: #c0c2c8;
+}
+.search-icon {
+  height: 1em;
+  color: #3e3f59;
+}
+.search-icon:hover {
+  cursor: pointer;
+}
+
+/** 9) creating the medium cards **/
+.card {
+  position: relative;
+}
+
+
+.card::after {
+  content: ''; /* Necessary for pseudo-elements */
+  display: block;
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  background: rgba(0, 0, 0, 0.3); /* Overlay color */
+  z-index: 1; /* Ensures the overlay is above the image but below the content */
+} 
+
+.card-content {
+  position: absolute;
+  bottom: 3em;
+  color: white;
+  margin: 0 1em;
+  z-index: 3;
+}
+.card-title {
+  font-size: 1.5em;
+}
+
+.medium-image {
+  height: 400px;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+/** 10 creating the menu */
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-icon {
+  height: 1.2em;
+}
+
+.menu-link {
+  color: black;
+  text-decoration: none;
+  margin-left: 3em;
+}
+
+/* General style */
+.button,
+input {
+  border-radius: 10px;
+  border: none;
+}
+
+.button {
+  background-color: white;
+  font-weight: bold;
+  padding: 1rem 4rem;
+}
+
+.border {
+  border-radius: 20px;
+}
